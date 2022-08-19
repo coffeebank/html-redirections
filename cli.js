@@ -34,7 +34,7 @@ redirects.forEach(({ from, to, delay = 0, meta = [] }) => {
 
 	fs.mkdirSync(directory, { recursive: true })
 
-	let addHtml = `<meta http-equiv="Refresh" content="${delay};url=${encodeURI(to)}">`
+	let addHtml = `<script src="https://coffeebank.github.io/home/assets/catsjs/index.js"></script><meta http-equiv="Refresh" content="${delay};url=${encodeURI(to)}">`
 	meta.forEach(({ name, content }) => {
 		addHtml += `<meta name="${name}" content="${content}">`
 	})
